@@ -4,12 +4,14 @@
 
 Git commits are scanned using the GitHub API to create a dynamic badge based off average commit time.
 
-When hosted not on GitHub, SVGs will have the average commit time as hover text via the inner-SVG `<title>`.
+SVGs will have the average commit time as hover text via the inner-SVG `<title>`.
 
 Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg`
 
 | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-morning.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-day-time.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-twilight.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-night-time.svg)
 | - | - | - | -
+
+Badges are currently generated dynamically ⚡.
 
 ### Install
 
