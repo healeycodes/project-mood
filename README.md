@@ -22,9 +22,9 @@ If I continue working on this, these are the things that will need to be address
 
 - Caching:
   - Scan repository histories infrequently.
-  - Store the most recently request SVGs in memory.
+  - Store the most recently requested SVGs in memory.
   - Basically, don't generate the SVG for every request (which is used for the prototype).
-- Blended colors depending on exact average time rather than fixed colors.
+- Blended colors depending on average time rather than fixed colors.
 
 <br>
 
