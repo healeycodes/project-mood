@@ -20,7 +20,7 @@ Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes
 
 If I continue working on this, these are the things that will need to be addressed:
 
-- Caching
+- Caching:
   - Scan repository histories infrequently.
   - Store the most recently request SVGs in memory.
   - Basically, don't generate the SVG for every request (which is used for the prototype).
