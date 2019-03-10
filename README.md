@@ -6,7 +6,7 @@ Git commits are scanned using the GitHub API to create a dynamic badge based off
 
 SVGs will have the average commit time as hover text via the inner-SVG tag `<title>`.
 
-Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg`
+Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg` -- works with any public repository.
 
 <br>
 
@@ -21,15 +21,21 @@ Badges are currently generated dynamically ⚡.
 
 `npm i`
 
+### Authentication
+
+For running and testing, set `GHTOKEN` to your GitHub [personal access token](https://github.com/settings/tokens), and `USERAGENT` to a custom user-agent (required by GitHub).
+
 ### Run
 
-Provide a port via `PORT` or default to `8080`
+(Optional) set a port via `PORT` -- `8080` by default.
 
 `npm start`
 
 ### Test
 
-Set `NODE_ENV` to `test`
+This repo uses Travis CI which currently builds and tests for commits/branches/PRs.
+
+Set `NODE_ENV` to `test`.
 
 `npm test`
 
