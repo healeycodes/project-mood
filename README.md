@@ -6,14 +6,25 @@ Git commits are scanned using the GitHub API to create a dynamic badge based off
 
 SVGs will have the average commit time as hover text via the inner-SVG tag `<title>`.
 
-Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg` -- works with any public repository.
+Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg` -- works with any public repository. Badges are currently generated dynamically.
 
 <br>
 
 | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-morning.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-day-time.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-twilight.svg) | ![](https://github.com/healeycodes/project-mood/blob/master/samples/project%20mood-night-time.svg)
 | - | - | - | -
 
-Badges are currently generated dynamically ⚡.
+
+
+
+### Roadmap 🚗
+
+If I continue working on this, these are the things that will need to be addressed:
+
+- Caching
+  - Scan repository histories infrequently.
+  - Store the most recently request SVGs in memory.
+  - Basically, don't generate the SVG for every request (which is used for the prototype).
+- Blended colors depending on exact average time rather than fixed colors.
 
 <br>
 
