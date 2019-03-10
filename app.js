@@ -42,7 +42,7 @@ app.get('/:owner/:repo.svg', (req, res) => {
                 .end();
         }
 
-        // Scan commits
+        // Scan commits, find average commit time (in their time zone)
         const times = json.map(item => item.commit.author.date);
         const average = times.reduce((sum, time) => {
             const d = new Date(time);
@@ -51,7 +51,7 @@ app.get('/:owner/:repo.svg', (req, res) => {
         }, 0) / times.length;
 
 
-        // Find color theme
+        // Find color theme based off this average commit time
         let color;
         let timeOfDay;
         if (average < 6.5) {
@@ -89,8 +89,12 @@ app.get('/:owner/:repo.svg', (req, res) => {
     request(options, callback);
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-    console.log('Press Ctrl+C to quit.');
-});
+if (process.env.NODE_ENV === 'test') {
+    module.exports = app;
+} else {
+    const PORT = process.env.PORT || 8080;
+    app.listen(PORT, () => {
+        console.log(`App listening on port ${PORT}`);
+        console.log('Press Ctrl+C to quit.');
+    });
+}
