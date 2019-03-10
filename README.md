@@ -23,7 +23,7 @@ Badges are currently generated dynamically ⚡.
 
 ### Authentication
 
-For running and testing, set `GHTOKEN` to your GitHub [personal access token](https://github.com/settings/tokens).
+For running and testing, set `GHTOKEN` to your GitHub [personal access token](https://github.com/settings/tokens), and `USERAGENT` to a custom user-agent (required by GitHub).
 
 ### Run
 
