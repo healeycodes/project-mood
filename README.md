@@ -44,7 +44,9 @@ For running and testing, set `GHTOKEN` to your GitHub [personal access token](ht
 
 ### Test
 
-This repo uses Travis CI which currently builds and tests for commits/branches/PRs.
+This repo uses Travis CI which currently builds and tests for commits/branches/PRs
+
+The test framework is Mocha/SuperTest.
 
 Set `NODE_ENV` to `test`.
 
