@@ -32,7 +32,7 @@ app.get('/:owner/:repo.svg', (req, res) => {
 
     const callback = (err, _, body) => {
         const json = JSON.parse(body);
-
+        
         // Check for missing repo or unknown error
         if (json.hasOwnProperty('message') &&
             json.message.match(/not found/gmi) !== null ||
@@ -43,14 +43,13 @@ app.get('/:owner/:repo.svg', (req, res) => {
                 .end();
         }
 
-        // Scan commits, find average commit time (in their time zone)
+        // Scan commits, find average commit time
         const times = json.map(item => item.commit.author.date);
         const average = times.reduce((sum, time) => {
             const d = new Date(time);
-            const hours = d.getUTCHours() + (d.getUTCMinutes() / 60) + (d.getUTCSeconds() / 60 / 60);
+            const hours = d.getHours() + (d.getMinutes() / 60) + (d.getSeconds() / 60 / 60);
             return hours + sum;
         }, 0) / times.length;
-
 
         // Find color theme based off this average commit time
         let color;
