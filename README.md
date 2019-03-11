@@ -32,15 +32,21 @@ If I continue working on this, these are the things that will need to be address
 
 `npm i`
 
+<br>
+
 ### Authentication
 
 For running and testing, set `GHTOKEN` to your GitHub [personal access token](https://github.com/settings/tokens), and `USERAGENT` to a custom user-agent (required by GitHub).
+
+<br>
 
 ### Run
 
 (Optional) set a port via `PORT` -- `8080` by default.
 
 `npm start`
+
+<br>
 
 ### Test
 
