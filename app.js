@@ -33,9 +33,10 @@ app.get('/:owner/:repo.svg', (req, res) => {
     const callback = (err, _, body) => {
         const json = JSON.parse(body);
 
-        // Check for unknown/private repo
+        // Check for missing repo or unknown error
         if (json.hasOwnProperty('message') &&
-            json.message.match(/not found/gmi) !== null) {
+            json.message.match(/not found/gmi) !== null ||
+            !Array.isArray(json)) {
             return res
                 .status(200)
                 .send(svgError)
