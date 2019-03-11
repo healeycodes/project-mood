@@ -2,11 +2,11 @@
 
 ## Project Mood
 
+Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg`. This API works with any public repository.
+
 Git commits are scanned using the GitHub API to create a dynamic badge based off average commit time.
 
 SVGs will have the average commit time as hover text via the inner-SVG tag `<title>`.
-
-Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg` -- works with any public repository. Badges are currently generated dynamically.
 
 <br>
 
@@ -21,8 +21,8 @@ Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes
 If I continue working on this, these are the things that will need to be addressed:
 
 - Caching:
-  - Scan repository histories infrequently.
-  - Store the most recently requested SVGs in memory.
+  - Repositories should be scanned infrequently rather than per request.
+  - We can store the most recently requested SVGs in memory.
   - Basically, don't generate the SVG for every request (which is used for the prototype).
 - Blended colors depending on average time rather than fixed colors.
 
