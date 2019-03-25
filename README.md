@@ -2,7 +2,7 @@
 
 ## Project Mood
 
-Create a badge by pointing your markup to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg`. This API works with any public repository.
+Create a badge by pointing an image markup tag to `/:owner/:repo.svg` e.g. `/healeycodes/project-mood.svg`. The API works with any public repository.
 
 Git commits are scanned using the GitHub API to create a dynamic badge based off average commit time.
 
