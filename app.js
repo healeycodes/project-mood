@@ -26,7 +26,7 @@ app.get('/:owner/:repo.svg', (req, res) => {
     const options = {
         url: `${api}repos/${req.params.owner}/${req.params.repo}/commits?${token}`,
         headers: {
-            'User-Agent': process.env.USERAGENT
+            'User-Agent': `${process.env.USERAGENT}`
         }
     };
 
